@@ -1,5 +1,17 @@
 # Archer-game
-This game is a type of archery game.
+This game is a type of archery game. In this game there is an invisible archer which holds up a bow, that can turn 35 degrees on both direction(up or down). This bow fires up an arrow at a time. Score is calculated on the basis of the box striked by the arrow. 
+
+#Score Distribution
+Box Touched by arrow : POINTS gained
+                   1 : 10
+                   2 : 20
+                   3 : 30
+                   4 : 40
+                   5 : 50
+                   6 : 40
+                   7 : 30
+                   8 : 20
+                   9 : 10
 
 # Language and Software Used to develop
 I used 'LUA' language for coding the game. Love2d is the software in which the code is run. 
@@ -30,7 +42,9 @@ Gameplay has 3 parts:
 # Projectile Motion 
 
 This game is setup in an alternate space which follows the rules of physics as our planet but has some different value of constants there.
-Accelaration due to gravity(ACCEL_Y) = 2p/s^2
-Spring Constant of the string in the bow(K)= 2.025(p)(kg)/s^3
-Here, p -> pixels
+Accelaration due to gravity(ACCEL_Y) = 2p/s^2.
+Spring Constant of the string in the bow(K)= 2.025(p)(kg)/s^3. 
+Here, p -> pixels.
+Spring constant is used to calculate Velocity multiplier (VELOCITY_MUL) which is equal to square root(2*K/m).
+ m=0.018kg, taken an average mass of arrow
 
