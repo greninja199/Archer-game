@@ -1,7 +1,7 @@
 # Archer-game
 This game is a type of archery game. In this game there is an invisible archer which holds up a bow, that can turn 35 degrees on both direction(up or down). This bow fires up an arrow at a time. Score is calculated on the basis of the box striked by the arrow. 
 
-#Score Distribution
+# Score Distribution
 Box Touched by arrow : POINTS gained
                    1 : 10
                    2 : 20
@@ -46,5 +46,12 @@ Accelaration due to gravity(ACCEL_Y) = 2p/s^2.
 Spring Constant of the string in the bow(K)= 2.025(p)(kg)/s^3. 
 Here, p -> pixels.
 Spring constant is used to calculate Velocity multiplier (VELOCITY_MUL) which is equal to square root(2*K/m).
- m=0.018kg, taken an average mass of arrow
+ m=0.018kg, taken an average mass of arrow.
 
+# Problems faced
+
+Rotating the Bow was a pretty difficult job in the code.
+
+# Scope of Improvement
+
+Launching arrow horizontally still makes the arrow diappear. It is because the y value of tail of arrow becomes 0. Since the value of Sin(0) is 0. So the arrow seems to disappear when it is in y=0 state at the most upward of the screen. This can be fixed by inducing an extra if-else statement or an extra variable for calculated sin angle value which will change at horizontal position to not zero.
