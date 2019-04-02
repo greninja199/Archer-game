@@ -17,6 +17,10 @@ Box Touched by arrow : POINTS gained
 I used 'LUA' language for coding the game. Love2d is the software in which the code is run. 
 It provides the environment to run the code. 
 
+# Libraries Added
+
+Push.lua is the library required for some of its functions that should be kept in the same folder as main.lua to run the project.
+
 # How to play
 
 Press 'W' to increase the angle with the horizontal direction.
