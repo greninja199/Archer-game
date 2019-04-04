@@ -86,8 +86,15 @@ function love.update(dt)        -- Runs after every 'dt' time
             con=1                                                   --sets the value of con to 1
             velocity = VELOCITY_MUL * dist                          --sets values of velocity according to draw length
             velocity_x = VELOCITY_MUL * dist * 0.2 * math.cos(rad_degree)       --velocity in x direction
-            velocity_y = VELOCITY_MUL * dist * 0.2 * math.sin( rad_degree )     --velocity in y direction
-            travel_time = velocity * math.sin(rad_degree) / ACCEL_Y             --updates the travel time
+            if degree == 0 then
+                velocity_y = VELOCITY_MUL * dist * 0.2 * math.sin( math.rad(10) )
+                travel_time = velocity * math.sin(math.rad(10)) / ACCEL_Y  
+            else
+                travel_time = velocity * math.sin(rad_degree) / ACCEL_Y  
+                velocity_y = VELOCITY_MUL * dist * 0.2 * math.sin( rad_degree )     --velocity in y direction
+            end
+    
+                       --updates the travel time
             rate = math.rad(degree*35 / travel_time)                            --suitable rate for reduction of variable rad_degree
 
     elseif love.keyboard.isDown('w')  and null_con == 0 then        --If 'W' is pressed then angle is shifted upward by 1
