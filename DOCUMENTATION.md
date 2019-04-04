@@ -58,7 +58,7 @@ Rotating the Bow was a pretty difficult job in the code.
 
 # Scope of Improvement
 
-Launching arrow horizontally still makes the arrow diappear. It is because the y value of tail of arrow becomes 0. Since the value of Sin(0) is 0. So the arrow seems to disappear when it is in y=0 state at the most upward of the screen. This can be fixed by inducing an extra if-else statement or an extra variable for calculated sin angle value which will change at horizontal position to not zero.
+The bug of arrow not launching horizontally is fixed. The new improvements can be Graphical development in the game.
 
 # Sources
 
